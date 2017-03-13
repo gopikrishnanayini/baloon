@@ -1,0 +1,19 @@
+<%=Listing colleges%>
+<table>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+<% @colleges.each do |format| %>
+ <tr>
+ <td><%= college.name %></td>
+ <td><%= colleges.address %></td>
+ <td><%= link_to 'show', college_path(college) %></td>
+ <td><%= link_to 'edit', edit_college_path(college) %></td>
+ <td><%= link_to 'destroy', college_path(college),
+        method: :delete,data: { clear: 'Are you sure?' } %></td>
+ </tr>
+ <% end %>
+ </table>
+ <%= link_to 'New college', new_college_path %>
+ 
